@@ -32,7 +32,7 @@ const handleLogin = async (e) => {
     console.log(result.data);
     getCurrentUser()
     navigate("/")
-    
+
    } catch (error) {
     console.log(error.response?.data || error.message); 
    }

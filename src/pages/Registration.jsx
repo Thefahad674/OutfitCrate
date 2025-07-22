@@ -35,6 +35,8 @@ function Registration() {
         withCredentials: true,
       }
     );
+    getCurrentUser()
+    navigate("/")
     console.log("Success:", res.data);
   } catch (error) {
     console.error("Full error:", error); // 👈 Log the entire error
@@ -53,6 +55,8 @@ const googleSignup = async () => {
             name, email
         }, {withCredentials:true})
         console.log(result.data);
+        getCurrentUser()
+        navigate("/")
     } catch (error) {
         console.log(error);
     }
